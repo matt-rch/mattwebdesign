@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <title>MattWebDesign — Création Web </title>
+  <style>
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{
+      margin:0;font-family:'Inter',sans-serif;
+      background:linear-gradient(160deg,#000,#0c0c0c,#111);
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* Header luxe */
+    header{
+      padding:22px 40px;display:flex;justify-content:space-between;align-items:center;
+      background:rgba(255,255,255,0.03);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,215,0,0.18);
+      position:sticky;top:0;z-index:50;
+    }
+    .logo{font-size:1.6rem;font-weight:700;color:#f5d57c}
+    nav a{color:#f5d57c;margin-left:22px;text-decoration:none;font-weight:600;transition:.25s;position:relative}
+    nav a:hover{color:white}
+    nav a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:2px;background:#f5d57c;transition:.3s}
+    nav a:hover::after{width:100%}
+
+    /* Hero */
+    .hero{text-align:center;padding:130px 40px;max-width:900px;margin:auto}
+    .hero h1{
+      font-size:3.2rem;font-weight:800;margin-bottom:15px;
+      background:linear-gradient(90deg,#f5d57c,#ffffff);
+      -webkit-background-clip:text;color:transparent;
+    }
+    .hero p{font-size:1.2rem;opacity:.9;color:#dcdcdc}
+
+    .badge{
+      background:rgba(255,255,255,0.06);
+      color:#f5d57c;padding:10px 16px;border-radius:10px;font-weight:600;font-size:.95rem;
+      border:1px solid rgba(255,215,0,0.25);
+      backdrop-filter:blur(10px);
+    }
+
+    .cta-hero{
+      display:inline-block;margin-top:40px;padding:14px 28px;border-radius:10px;
+      background:#f5d57c;color:#000;text-decoration:none;font-weight:700;
+      transition:.25s;
+    }
+    .cta-hero:hover{background:white}
+
+    /* Sections */
+    .section{padding:90px 40px;max-width:1100px;margin:auto}
+
+    /* Cards luxe */
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:32px;margin-top:50px}
+    .card{
+      background:rgba(255,255,255,0.06);
+      border-radius:18px;padding:28px;
+      border:1px solid rgba(255,215,0,0.18);
+      backdrop-filter:blur(12px);
+      transition:.25s;
+      box-shadow:0 0 22px rgba(0,0,0,0.35);
+    }
+    .card:hover{transform:translateY(-5px);box-shadow:0 0 26px rgba(255,215,0,0.25)}
+
+    .icon{font-size:40px;margin-bottom:12px;color:#f5d57c}
+
+    /* Contact */
+    .contact-btn{
+      padding:10px 18px;border-radius:8px;background:#f5d57c;color:#000 !important;
+      font-weight:700;text-decoration:none !important;display:inline-block;margin-left:10px;
+      transition:.25s
+    }
+    .contact-btn:hover{background:white}
+
+    /* Skills */
+    .competences{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+    .comp{
+      background:rgba(255,255,255,0.06);padding:16px 22px;border-radius:10px;font-weight:700;
+      border:1px solid rgba(255,215,0,0.25);color:#f5d57c;font-size:1rem;
+      backdrop-filter:blur(12px);
+    }
+
+    footer{
+      text-align:center;padding:40px 0;margin-top:40px;background:rgba(255,255,255,0.03);
+      border-top:1px solid rgba(255,215,0,0.22);
+      color:#f5d57c;font-weight:600;
+      backdrop-filter:blur(10px);
+    }
+
+    /* Reveal animation */
+    .reveal{opacity:0;transform:translateY(40px);transition:1s ease}
+    .reveal.active{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">MattWebDesign — <span style="font-size:0.9rem;opacity:0.8">mathisroche84300@gmail.com</span></div>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#services">Services</a>
+      
+      
+      <a href="#contact">Me contacter</a>
+    </nav>
+  </header>
+
+  <section id="accueil" class="hero reveal">
+    <h1>Création de sites modernes et performants.</h1>
+    <p>Votre présence en ligne, notre expertise.</p>
+    
+    <div class="badges reveal" style="display:flex;justify-content:center;gap:20px;margin-top:40px;flex-wrap:wrap">
+      <div class="badge">⭐ Qualité professionnelle</div>
+      <div class="badge">📱 100% responsive</div>
+      <div class="badge">⚡ Livraison rapide</div>
+      <div class="badge">🔒 Sécurisé</div>
+    </div>
+
+    <a href="#contact" class="cta-hero reveal">Me contacter</a>
+
+  </section>
+
+  <section id="presentation" class="section reveal" style="padding-top:20px;text-align:left; padding-left:20px;">
+    <p style="font-size:1.75rem;font-weight:800;max-width:900px;opacity:.95;margin:0;line-height:1.65;letter-spacing:0.4px;color:#e6e6e6"">
+      Bonjour, je me présente, je m’appelle Mathis Roche et je suis spécialisé dans la création de sites web modernes, élégants et efficaces. Mon objectif est de vous fournir des solutions digitales parfaitement adaptées à vos besoins : design professionnel, performance, fluidité et optimisation. Chaque projet est réalisé avec soin, créativité et une attention particulière aux détails pour garantir une expérience utilisateur impeccable.
+    </p>
+  </section>
+
+  <section id="services" class="section reveal">
+    <h2 style="font-size:2.8rem;font-weight:800;letter-spacing:1px;text-align:center;margin-bottom:10px;animation:fadeLeft 1.2s ease both";font-weight:800;letter-spacing:1px;text-align:center;margin-bottom:10px">Services</h2>
+    <p style="opacity:.9;text-align:center;font-size:1.2rem;margin-bottom:50px">Des solutions web élégantes, dynamiques et conçues pour vous démarquer.</p>
+
+    <div class="card-grid reveal" style="animation:fadeRight 1.2s ease both">
+      <div class="card reveal" style=""><div class="icon">🖥️</div><h3>Site Vitrine</h3><p>Un site élégant mettant en valeur votre identité, avec un design sur-mesure et une navigation fluide pour présenter votre activité de manière professionnelle.</p></div>
+      <div class="card reveal" style=""><div class="icon">⚡</div><h3>Landing Page</h3><p>Une page unique, optimisée pour convertir, avec animations, effets dynamiques et storytelling pour captiver vos visiteurs dès la première seconde.</p></div>
+      <div class="card reveal" style=""><div class="icon">🔧</div><h3>Refonte de votre site</h3><p>Une refonte claire et moderne de votre site existant : nouveau design, meilleure performance et expérience utilisateur améliorée.</p></div>
+    </div>
+  </section>
+
+  
+
+  
+
+  <section id="contact" class="section contact reveal">
+    <h2 style="font-size:2.5rem;font-weight:700">Contact</h2>
+    <p style="margin-top:25px;opacity:.9">Vous pouvez me contacter ici : <strong>mathisroche84300@gmail.com</strong> — <a href="mailto:mathisroche84300@gmail.com" class="contact-btn">me contacter</a></p>
+  </section>
+
+    <section class="section reveal">
+    <h2 style="text-align:center;font-size:2.4rem;font-weight:800">Compétences</h2>
+    <div class="competences">
+      <div class="comp">HTML</div>
+      <div class="comp">CSS</div>
+      <div class="comp">JavaScript</div>
+      <div class="comp">SEO</div>
+      <div class="comp">UI / UX</div>
+    </div>
+  </section>
+
+  <footer>© 2025 MattWebDesign — Tous droits réservés</footer>
+
+  <script>
+    function reveal(){document.querySelectorAll('.reveal').forEach(el=>{
+      const top=el.getBoundingClientRect().top;
+      if(top<window.innerHeight-80){el.classList.add('active')}})}
+    window.addEventListener('scroll',reveal);reveal();
+  </script>
+  
+</body>
+</html>
